@@ -18,7 +18,7 @@ jobs:
 
       run: go test ./<your package name>
   docker:
-  needs: test
+  needs: Test
   runs-on: macos-latest
   steps:
   - name: Login to DockerHub
