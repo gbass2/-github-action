@@ -19,7 +19,7 @@ jobs:
       run: go test ./<your package name>
 
   docker:
-    needs: tes
+    needs: test
     runs-on: ubuntu-latest
     steps:
     - name: Login to DockerHub
