@@ -19,7 +19,7 @@ jobs:
       run: go test ./<your package name>
   docker:
   needs: test
-  runs-on: ubuntu-latest
+  runs-on: macos-latest
   steps:
   - name: Login to DockerHub
     uses: docker/login-action@v1
@@ -31,6 +31,6 @@ jobs:
     uses: docker/build-push-action@v2
     with:
       push: true
-      tags: arunravindran/helloserver:latest
+      tags: gbass2/helloserver:latest
   - name: Image digest
     run: echo ${{ steps.docker_build.outputs.digest }}
